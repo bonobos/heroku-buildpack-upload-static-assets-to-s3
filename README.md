@@ -37,3 +37,6 @@ To return to the default value just unset the config vars
 heroku config:unset STATIC_SERVER
 ```
 
+# Disabling the Buildpack
+
+The script is built to check for an optional environment variable, `DISABLE_ASSET_UPLOAD`, which exits the script without error if its value is `true`. To toggle the buildpack for a specific app, add this variable (with the appropriate value) to the app's [Heroku-managed config vars](https://devcenter.heroku.com/articles/config-vars). 
